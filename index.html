@@ -2,78 +2,66 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Azaruses Wiki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azaruses</title>
     <style>
         body {
-            background-color: #121212;
-            color: #e0e0e0;
-            font-family: 'Georgia', serif;
-            display: flex;
-            flex-direction: column; /* Xếp các ô theo chiều dọc từ trên xuống */
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            gap: 20px; /* Khoảng cách giữa 2 cái bảng */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 40px;
+            background-color: #ffffff;
+            color: #1a1a1a;
         }
 
-        /* Bảng BH Azarus cũ */
-        .card {
-            background-color: #1e1e1e;
-            border: 2px solid #e91e63;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 0 20px rgba(233, 30, 99, 0.3);
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-        }
         h1 {
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        p.subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e5e5e5;
+            margin-bottom: 40px;
+        }
+
+        /* Nút màu đen với hiệu ứng Hover */
+        .btn-enter {
+            display: inline-block;
+            background-color: #121212;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Khi rê chuột vào nút */
+        .btn-enter:hover {
+            border-color: #e91e63;
             color: #f48fb1;
-            margin-bottom: 10px;
-        }
-        p {
-            color: #b0bec5;
-            font-style: italic;
-        }
-
-        /* Bảng trắng mới thêm vào bên dưới */
-        .white-card {
-            background-color: #ffffff; /* Nền màu trắng */
-            color: #121212; /* Chữ màu tối cho dễ đọc */
-            border: 3px solid transparent; /* Viền ẩn ban đầu */
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-            cursor: pointer; /* Đổi con trỏ chuột thành hình bàn tay khi rê vào */
-            text-decoration: none; /* Xóa gạch chân mặc định của link */
-            box-sizing: border-box;
-            transition: all 0.3s ease; /* Hiệu ứng chuyển màu viền mượt mà */
-        }
-
-        /* Hiệu ứng RÊ CHUỘT (Hover) cho bảng trắng */
-        .white-card:hover {
-            border-color: #e91e63; /* Hiện viền màu hồng phát sáng khi rê chuột */
-            box-shadow: 0 0 15px rgba(233, 30, 99, 0.6); /* Đổ bóng viền */
-            transform: translateY(-3px); /* Nhích nhẹ lên trên tạo cảm giác tương tác */
+            box-shadow: 0 0 15px rgba(233, 30, 99, 0.4);
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
 
-    <!-- Bảng 1: BH Azarus -->
-    <div class="card">
-        <h1>BH Azarus</h1>
-        <p>"Người có học thì dù vỡ kịch bản vẫn phải giữ đúng cái nét!"</p>
-    </div>
+    <h1>Azaruses</h1>
+    <p class="subtitle">Unofficial Wiki & Lore Books</p>
+    <hr>
 
-    <!-- Bảng 2: Bảng trắng bấm vào chuyển trang -->
-    <a href="https://masilkdegoat.github.io/Azaruses/" class="white-card">
-        <h3 style="margin: 0; color: #121212;">Quay lại trang chính</h3>
-        <p style="margin-top: 5px; color: #555; font-style: normal;">(Bấm vào đây để chuyển trang)</p>
-    </a>
+    <!-- Nút bấm chuyển sang trang BH Azarus -->
+    <a href="bh-azarus.html" class="btn-enter">Khám phá BH Azarus &rarr;</a>
 
 </body>
 </html>
