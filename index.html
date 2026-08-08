@@ -36,39 +36,57 @@
             flex-wrap: wrap;
         }
 
+        /* Khung Card nhân vật bao gồm cả ảnh và chữ */
+        .char-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #1a1a1a;
+            width: 200px;
+            padding: 15px;
+            border-radius: 12px;
+            border: 2px solid #e5e5e5;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
         /* Khung chứa ảnh */
-        .char-link {
+        .img-box {
+            width: 170px;
+            height: 170px;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 200px;
-            height: 200px;
-            border-radius: 12px;
             overflow: hidden;
-            position: relative;
-            border: 3px solid #e5e5e5;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            background-color: #ffffff;
+            border-radius: 8px;
         }
 
-        /* Thẻ ảnh co giãn vừa vặn khung */
         .char-img {
-            max-width: 90%;
-            max-height: 90%;
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain;
             transition: transform 0.3s ease;
         }
 
-        /* Hiệu ứng rê chuột */
-        .char-link:hover .char-img {
-            transform: scale(1.1);
+        /* Chữ tên nhân vật bên dưới */
+        .char-title {
+            margin-top: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #121212;
         }
 
-        .char-link:hover {
+        /* Hiệu ứng khi rê chuột vào cả card */
+        .char-card:hover {
             border-color: #1a1a1a;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .char-card:hover .char-img {
+            transform: scale(1.08);
         }
     </style>
 </head>
@@ -79,8 +97,12 @@
     <hr>
 
     <div class="character-container">
-        <a href="./azarus.html" class="char-link" title="Khám phá Azarus">
-            <img src="./sb.jpg" alt="Azarus 🍞" class="char-img">
+        <!-- Card Azarus vừa có ảnh vừa có chữ -->
+        <a href="./azarus.html" class="char-card" title="Khám phá Azarus">
+            <div class="img-box">
+                <img src="./sb.jpg" alt="Azarus 🍞" class="char-img">
+            </div>
+            <span class="char-title">Azarus 🍞</span>
         </a>
     </div>
 
