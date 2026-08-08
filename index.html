@@ -30,33 +30,42 @@
             margin-bottom: 40px;
         }
 
-        .btn-container {
+        .character-container {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
-        .btn-enter {
-            display: inline-block;
-            background-color: #121212;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            border: 2px solid transparent;
+        /* Khung chứa ảnh nút bấm Azarus */
+        .char-link {
+            display: block;
+            width: 200px;
+            height: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            border: 3px solid transparent;
             transition: all 0.3s ease;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
         }
 
-        /* Nút Azarus (Hover Viền Trắng Ngà) */
-        .btn-azarus:hover {
-            border-color: #f5f5dc;
-            color: #fffdd0;
-            box-shadow: 0 0 15px rgba(245, 245, 220, 0.5);
-            transform: translateY(-2px);
+        /* Thẻ ảnh bên trong */
+        .char-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hiệu ứng khi rê chuột vào ảnh Azarus */
+        .char-link:hover .char-img {
+            transform: scale(1.08);
+        }
+
+        .char-link:hover {
+            border-color: #f5f5dc; /* Viền trắng ngà */
+            box-shadow: 0 0 15px rgba(245, 245, 220, 0.8);
+            transform: translateY(-3px);
         }
     </style>
 </head>
@@ -66,9 +75,12 @@
     <p class="subtitle">Unofficial Wiki & Lore Books</p>
     <hr>
 
-    <div class="btn-container">
-        <!-- Nút Azarus Bánh Mì -->
-        <a href="./azarus.html" class="btn-enter btn-azarus">Khám phá Azarus 🍞 &rarr;</a>
+    <div class="character-container">
+        <!-- Chỉ giữ lại nút ảnh Azarus (BH đã tạm ẩn) -->
+        <a href="./azarus.html" class="char-link" title="Khám phá Azarus">
+            <!-- Thay file ảnh image_azarus.png bằng tranh của bồ sau này nhé -->
+            <img src="./image_azarus.png" alt="Azarus 🍞" class="char-img">
+        </a>
     </div>
 
 </body>
