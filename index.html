@@ -36,35 +36,38 @@
             flex-wrap: wrap;
         }
 
-        /* Khung chứa ảnh nút bấm Azarus */
+        /* Khung chứa ảnh */
         .char-link {
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 200px;
             height: 200px;
             border-radius: 12px;
             overflow: hidden;
             position: relative;
-            border: 3px solid transparent;
+            border: 3px solid #e5e5e5;
             transition: all 0.3s ease;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
         }
 
-        /* Thẻ ảnh bên trong */
+        /* Thẻ ảnh co giãn vừa vặn khung */
         .char-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
             transition: transform 0.3s ease;
         }
 
-        /* Hiệu ứng khi rê chuột vào ảnh Azarus */
+        /* Hiệu ứng rê chuột */
         .char-link:hover .char-img {
-            transform: scale(1.08);
+            transform: scale(1.1);
         }
 
         .char-link:hover {
-            border-color: #f5f5dc; /* Viền trắng ngà */
-            box-shadow: 0 0 15px rgba(245, 245, 220, 0.8);
+            border-color: #1a1a1a;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             transform: translateY(-3px);
         }
     </style>
@@ -76,9 +79,7 @@
     <hr>
 
     <div class="character-container">
-        <!-- Chỉ giữ lại nút ảnh Azarus (BH đã tạm ẩn) -->
         <a href="./azarus.html" class="char-link" title="Khám phá Azarus">
-            <!-- Thay file ảnh image_azarus.png bằng tranh của bồ sau này nhé -->
             <img src="./sb.jpg" alt="Azarus 🍞" class="char-img">
         </a>
     </div>
