@@ -2,52 +2,126 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>BH Azarus - Azaruses Wiki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BH Azarus - Lore Book</title>
     <style>
         body {
-            background-color: #121212;
-            color: #e0e0e0;
-            font-family: 'Georgia', serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 40px;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            max-width: 800px;
+        }
+
+        /* Nút quay lại trang chủ */
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: 1px solid #e5e5e5;
+            transition: all 0.2s ease;
+        }
+
+        .back-btn:hover {
+            color: #1a1a1a;
+            border-color: #E9BD96;
+            background-color: #fff8f3;
+        }
+
+        /* Khung hiển thị hồ sơ nhân vật */
+        .profile-header {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        /* Khung ảnh đại diện lớn */
+        .big-avatar {
+            width: 220px;
+            height: 220px;
+            border-radius: 16px;
+            border: 3px solid #E9BD96;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            flex-shrink: 0;
         }
-        .card {
-            background-color: #1e1e1e;
-            border: 2px solid #e91e63;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 0 20px rgba(233, 30, 99, 0.3);
-            text-align: center;
-            max-width: 400px;
+
+        .big-avatar img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
-        h1 {
-            color: #f48fb1;
-            margin-bottom: 10px;
+
+        .profile-info h1 {
+            font-size: 2.2rem;
+            margin: 0 0 10px 0;
         }
-        p {
-            color: #b0bec5;
-            font-style: italic;
-        }
-        a.back-btn {
+
+        .profile-info .tag {
             display: inline-block;
-            margin-top: 20px;
-            color: #e91e63;
-            text-decoration: none;
-            font-size: 0.9rem;
+            background-color: #f3f3f3;
+            color: #555;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
         }
-        a.back-btn:hover {
-            text-decoration: underline;
+
+        hr {
+            border: none;
+            border-top: 1px solid #e5e5e5;
+            margin: 30px 0;
+        }
+
+        /* Phần nội dung bài viết / Lore */
+        .content-section {
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .content-section h2 {
+            font-size: 1.4rem;
+            color: #1a1a1a;
+            margin-top: 25px;
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>BH Azarus</h1>
-        <p>"Người có học thì dù vỡ kịch bản vẫn phải giữ đúng cái nét!"</p>
-        <a href="./index.html" class="back-btn">&larr; Quay lại trang chủ</a>
+
+    <!-- Nút nhảy về lại Trang chủ -->
+    <a href="./index.html" class="back-btn">← Quay lại trang chủ</a>
+
+    <!-- Phần Hồ Sơ Nhân Vật -->
+    <div class="profile-header">
+        <div class="big-avatar">
+            <!-- Ảnh đại diện tạm thời dùng sb.jpg như Sam yêu cầu -->
+            <img src="./sb.jpg" alt="BH Azarus">
+        </div>
+        <div class="profile-info">
+            <h1>BH Azarus 🌸</h1>
+            <span class="tag">Character Lore</span>
+            <p>Thông tin sơ lược hoặc một câu quote ngắn thật ngầu của BH Azarus nằm ở đây.</p>
+        </div>
     </div>
+
+    <hr>
+
+    <!-- Phần Nội Dung Chi Tiết / Story -->
+    <div class="content-section">
+        <h2>Giới thiệu</h2>
+        <p>Viết nội dung giới thiệu về BH Azarus ở đoạn này...</p>
+
+        <h2>Giai thoại & Lore</h2>
+        <p>Viết các câu chuyện, thông tin liên quan tới BH Azarus ở đoạn này...</p>
+    </div>
+
 </body>
 </html>
