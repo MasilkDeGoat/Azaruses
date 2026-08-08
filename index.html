@@ -9,11 +9,15 @@
             color: #e0e0e0;
             font-family: 'Georgia', serif;
             display: flex;
+            flex-direction: column; /* Xếp các ô theo chiều dọc từ trên xuống */
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            gap: 20px; /* Khoảng cách giữa 2 cái bảng */
         }
+
+        /* Bảng BH Azarus cũ */
         .card {
             background-color: #1e1e1e;
             border: 2px solid #e91e63;
@@ -22,6 +26,7 @@
             box-shadow: 0 0 20px rgba(233, 30, 99, 0.3);
             text-align: center;
             max-width: 400px;
+            width: 100%;
         }
         h1 {
             color: #f48fb1;
@@ -31,12 +36,44 @@
             color: #b0bec5;
             font-style: italic;
         }
+
+        /* Bảng trắng mới thêm vào bên dưới */
+        .white-card {
+            background-color: #ffffff; /* Nền màu trắng */
+            color: #121212; /* Chữ màu tối cho dễ đọc */
+            border: 3px solid transparent; /* Viền ẩn ban đầu */
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            cursor: pointer; /* Đổi con trỏ chuột thành hình bàn tay khi rê vào */
+            text-decoration: none; /* Xóa gạch chân mặc định của link */
+            box-sizing: border-box;
+            transition: all 0.3s ease; /* Hiệu ứng chuyển màu viền mượt mà */
+        }
+
+        /* Hiệu ứng RÊ CHUỘT (Hover) cho bảng trắng */
+        .white-card:hover {
+            border-color: #e91e63; /* Hiện viền màu hồng phát sáng khi rê chuột */
+            box-shadow: 0 0 15px rgba(233, 30, 99, 0.6); /* Đổ bóng viền */
+            transform: translateY(-3px); /* Nhích nhẹ lên trên tạo cảm giác tương tác */
+        }
     </style>
 </head>
 <body>
+
+    <!-- Bảng 1: BH Azarus -->
     <div class="card">
         <h1>BH Azarus</h1>
-        <p>"A person of true distinction maintains their grace, even when the script unravels."</p>
+        <p>"Người có học thì dù vỡ kịch bản vẫn phải giữ đúng cái nét!"</p>
     </div>
+
+    <!-- Bảng 2: Bảng trắng bấm vào chuyển trang -->
+    <a href="https://masilkdegoat.github.io/Azaruses/" class="white-card">
+        <h3 style="margin: 0; color: #121212;">Quay lại trang chính</h3>
+        <p style="margin-top: 5px; color: #555; font-style: normal;">(Bấm vào đây để chuyển trang)</p>
+    </a>
+
 </body>
 </html>
