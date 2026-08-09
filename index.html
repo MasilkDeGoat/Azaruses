@@ -94,9 +94,26 @@
         }
 
         /* AZARUS HOVER DO. NOT. TOUCH. */
-        .char-card:hover .char-title {
-            color: #e9bd96
-        }  
+        .img-hov {
+            display: none;
+        }
+        /* Khi rê chuột vào card Azarus: Ẩn ảnh normal, Hiện ảnh hover */
+        .azarus-card:hover .img-nor {
+            display: none;
+        }
+        
+        .azarus-card:hover .img-hov {
+            display: block;
+        }
+
+        /* Đổi màu viền và màu chữ bên dưới thành màu cam cho tông-sucontent với ảnh mới */
+        .azarus-card:hover {
+            border-color: #ff7a21; /* Mã màu cam sáng của nét vẽ */
+        }
+        .azarus-card:hover .char-title {
+            color: #ff7a21;
+        }
+
         
         /* BH AZARUS HOVER DO. NOT. TOUCH. */
         .bh-card:hover {
@@ -106,6 +123,7 @@
             color: #ffb7c5;
         }
 
+        
         /* VOID AZARUS HOVER DO. NOT. TOUCH. */
         .void-card:hover {
             border-color: #080502;
@@ -128,13 +146,13 @@
 
     <div class="character-container">
         <!-- ==================== AZARUS ==================== -->
-        <a href="./azarus.html" class="char-card" title="Learn More ABout Azarus">
+        <a href="./azarus.html" class="char-card azarus-card" title="Khám phá Azarus">
             <div class="img-box">
-                <img src="./sb.jpg" alt="Azarus 🍞" class="char-img">
+                <img src="./aza_nor.jpg" alt="Azarus Normal" class="char-img img-nor">
+                <img src="./aza_hov.jpg" alt="Azarus Hover" class="char-img img-hov">
             </div>
             <span class="char-title">Azarus 🍞</span>
-        </a>
-        
+        </a>        
         <!-- ==================== BH AZARUS ==================== -->
         <a href="./bh-azarus.html" class="char-card bh-card" title="Learn More ABout BH Azarus">
             <div class="img-box">
