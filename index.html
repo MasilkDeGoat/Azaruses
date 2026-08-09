@@ -32,6 +32,37 @@
         /* THE END OF THE BACKGROUND. DO. NOT. TOUCH. */
 
 
+        
+
+
+        /* TIÊU ĐỀ CHO TỪNG SECTION */
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 40px 0 20px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        /* KHU VỰC CHỨA CÁC CARD */
+        .character-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            align-items: flex-end;
+        }
+
+        /* RIÊNG CHO THE FOUNDER (CĂN GIỮA ĐỘC TÔN) */
+        .founder-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        /* DO. NOT. TOUCH. */
+
+
+
 
 
         /* CHARACTERS CONTAINERS ARE HERE */
@@ -40,8 +71,8 @@
             gap: 20px;
             flex-wrap: wrap;
         }
-
-/* CARD OF THE CHARACTERS ARE HERE */
+        
+        /* CARD OF THE CHARACTERS ARE HERE */
         .char-card {
             display: flex;
             flex-direction: column;
@@ -140,30 +171,53 @@
     <hr>
 
     <div class="character-container">
-        <!-- ==================== AZARUS ==================== -->
-        <a href="./azarus.html" class="char-card azarus-card" title="Khám phá Azarus">
-            <div class="img-box">
-                <img src="./aza_nor.png" alt="Azarus Normal" class="char-img img-nor">
-                <img src="./aza_hov.png" alt="Azarus Hover" class="char-img img-hov">
-            </div>
-            <span class="char-title">Azarus 🍞</span>
-        </a>        
-        <!-- ==================== BH AZARUS ==================== -->
-        <a href="./bh-azarus.html" class="char-card bh-card" title="Learn More ABout BH Azarus">
-            <div class="img-box">
-                <img src="./sb.jpg" alt="BH Azarus 🌸" class="char-img">
-            </div>
-            <span class="char-title">BH Azarus 🌸</span>
-        </a>
+
+        <!-- ================= SECTION 1: THE FOUNDER ================= -->
+        <h2 class="section-title">The Founder</h2>
+        <div class="founder-container">
+            
+            <!-- ==================== AZARUS ==================== -->
+            <a href="./azarus.html" class="char-card azarus-card" title="Khám phá Azarus">
+                <div class="img-box"> 
+                    <img src="./aza_nor.png" alt="Azarus Normal" class="char-img img-nor">
+                    <img src="./aza_hov.png" alt="Azarus Hover" class="char-img img-hov">
+                </div>
+                <span class="char-title">Azarus 🍞</span>
+            </a>
+        </div>
+
         
-        <!-- ==================== AZARUS ==================== -->
-        <a href="./void-azarus.html" class="char-card void-card" title="Learn More ABout Void Azarus">
-            <div class="img-box">
-                <img src="./sb.jpg" alt="VOID Azarus ☠️" class="char-img">
-            </div>
-            <span class="char-title">VOID Azarus ☠️</span>
-        </a>
-    </div>
+        <!-- ================= SECTION 2: THE GROUP MEMBERS ================= -->
+        <h2 class="section-title">The Group Members</h2>
+        <div class="character-container">
+            
+        <!-- ==================== BH AZARUS ==================== -->
+            <a href="./bh-azarus.html" class="char-card bh-card" title="Learn More ABout BH Azarus">
+                <div class="img-box">
+                    <img src="./sb.jpg" alt="BH Azarus 🌸" class="char-img">
+                </div>
+                <span class="char-title">BH Azarus 🌸</span>
+            </a>
+        </div>
+        
+
+        <!-- ================= SECTION 3: ENEMY ================= -->
+        <h2 class="section-title">Enemy</h2>
+        <div class="character-container">
+            
+        <!-- ==================== VOID AZARUS ==================== -->
+            <a href="./void-azarus.html" class="char-card void-card" title="Learn More ABout Void Azarus">
+                <div class="img-box">
+                    <img src="./sb.jpg" alt="VOID Azarus ☠️" class="char-img">
+                </div>
+                <span class="char-title">VOID Azarus ☠️</span>
+            </a>
+        </div>
+
+
+        <!-- ================= SECTION 4: SIDE CHARACTERS ================= -->
+        <h2 class="section-title">Side Characters</h2>
+        <div class="character-container">
 
 </body>
 </html>
