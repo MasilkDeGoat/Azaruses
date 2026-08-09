@@ -41,7 +41,7 @@
             flex-wrap: wrap;
         }
 
-        /* CARD OF THE CHARACTERS ARE HERE */
+/* CARD OF THE CHARACTERS ARE HERE */
         .char-card {
             display: flex;
             flex-direction: column;
@@ -49,28 +49,28 @@
             text-decoration: none;
             color: #1a1a1a;
             width: 200px;
-            padding: 15px;
-            border-radius: 12px;
-            border: 2px solid #e5e5e5;
-            background-color: #ffffff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            padding: 0;                   /* Bỏ khoảng trống bên trong */
+            border-radius: 0;            /* Bỏ bo góc khung ngoài */
+            border: none;                /* BỎ VIỀN KHUNG */
+            background-color: transparent;/* BỎ NỀN TRẮNG */
+            box-shadow: none;            /* BỎ BÓNG MỜ KHUNG */
             transition: all 0.3s ease;
         }
 
         /* PICTURE IN CARD */
         .img-box {
-            width: 170px;
-            height: 170px;
+            width: 100%;                 /* Cho khung ảnh tự co giãn theo chiều rộng card */
+            height: auto;                /* Cho chiều cao tự do theo tỉ lệ ảnh Polaroid */
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
-            border-radius: 8px;
+            overflow: visible;
+            border-radius: 0;
         }
 
         .char-img {
-            max-width: 100%;
-            max-height: 100%;
+            width: 100%;                 /* Ảnh tự ôm trọn 100% độ rộng */
+            height: auto;                /* Giữ nguyên tỉ lệ dọc của ảnh Polaroid */
             object-fit: contain;
             transition: transform 0.3s ease;
         }
@@ -85,14 +85,17 @@
 
         /* HOVER. HOVER. HOVER */
         .char-card:hover {
-            border-color: #E9BD96;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-            transform: translateY(-4px);
+            border-color: transparent;   /* Không hiện viền khi rê chuột */
+            box-shadow: none;            /* Không hiện bóng khi rê chuột */
+            transform: translateY(-4px); /* Vẫn nẩy nhẹ card lên cực mượt */
         }
+        
         .char-card:hover .char-img {
-            transform: scale(1.08);
+            transform: scale(1.05);      /* Phóng to nhẹ riêng bức ảnh */
         }
 
+        
+        
         /* AZARUS HOVER DO. NOT. TOUCH. */
         .img-hov {
             display: none;
