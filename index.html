@@ -143,20 +143,30 @@
 
         
         /* BH AZARUS HOVER DO. NOT. TOUCH. */
-        .bh-card:hover {
-            border-color: #ffb7c5;
+        .img-hov {
+            display: none;
         }
-        .bh-card:hover .char-title {
-            color: #ffb7c5;
+        /* Khi rê chuột vào card Azarus: Ẩn ảnh normal, Hiện ảnh hover */
+        .bh-azarus-card:hover .img-nor {
+            display: none;
+        }
+        
+        .bh-azarus-card:hover .img-hov {
+            display: block;
         }
 
         
         /* VOID AZARUS HOVER DO. NOT. TOUCH. */
-        .void-card:hover {
-            border-color: #080502;
+        .img-hov {
+            display: none;
         }
-        .void-card:hover .char-title {
-            color: #080502;
+        /* Khi rê chuột vào card Azarus: Ẩn ảnh normal, Hiện ảnh hover */
+        .void-azarus-card:hover .img-nor {
+            display: none;
+        }
+        
+        .void-azarus-card:hover .img-hov {
+            display: block;
         }
     </style>
 </head>
