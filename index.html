@@ -37,27 +37,32 @@
 
         /* TIÊU ĐỀ CHO TỪNG SECTION */
         .section-title {
+            width: 100%;                  /* Trải dài full màn hình */
             font-size: 1.5rem;
             font-weight: 700;
             color: #1a1a1a;
             margin: 40px 0 20px 0;
             padding-bottom: 8px;
             border-bottom: 2px solid #f0f0f0;
+            clear: both;
         }
-        
-        /* KHU VỰC CHỨA CÁC CARD */
+
+        /* KHU VỰC CHỨA CÁC CARD CỦA MỖI SECTION */
         .character-container {
             display: flex;
             flex-wrap: wrap;
             gap: 25px;
-            align-items: flex-end;
+            align-items: flex-start;
+            width: 100%;
+            margin-bottom: 30px;
         }
 
-        /* RIÊNG CHO THE FOUNDER (CĂN GIỮA ĐỘC TÔN) */
+        /* RIÊNG CHO THE FOUNDER (CĂN GIỮA) */
         .founder-container {
             display: flex;
             justify-content: center;
             width: 100%;
+            margin-bottom: 30px;
         }
         /* DO. NOT. TOUCH. */
 
