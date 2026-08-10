@@ -50,8 +50,9 @@
         /* KHU VỰC CHỨA CÁC CARD CỦA MỖI SECTION */
         .character-container {
             display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
+            flex-direction: row;        /* Nằm ngang chung một hàng */
+            flex-wrap: wrap;           /* Tự rớt hàng nếu màn hình điện thoại quá hẹp */
+            gap: 25px;                 /* Khoảng cách giữa Lazarus và BH */
             align-items: flex-start;
             width: 100%;
             margin-bottom: 30px;
@@ -182,7 +183,7 @@
         <h2 class="section-title">The Group Members</h2>
         <div class="character-container">
 
-        <!-- ==================== BH AZARUS ==================== -->
+        <!-- ==================== LAZARUS ==================== -->
             <a href="./la-azarus.html" class="char-card la-card" title="Learn More ABout Lazarus">
                 <div class="img-box">
                     <img src="./aza_nor.png" alt="Azarus Normal" class="char-img img-nor">
@@ -190,7 +191,7 @@
                 </div>
                 <span class="char-title">Lazarus 🦇</span>
             </a>
-        </div>
+            
         <!-- ==================== BH AZARUS ==================== -->
             <a href="./bh-azarus.html" class="char-card bh-card" title="Learn More ABout BH Azarus">
                 <div class="img-box">
