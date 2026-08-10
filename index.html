@@ -60,8 +60,11 @@
         /* RIÊNG CHO THE FOUNDER (CĂN GIỮA) */
         .founder-container {
             display: flex;
-            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            align-items: flex-start;
             width: 100%;
+            margin-top: 20px;            /* THÊM DÒNG NÀY: Đẩy đống card hạ xuống 20px */
             margin-bottom: 30px;
         }
         /* DO. NOT. TOUCH. */
@@ -90,7 +93,7 @@
             border: none;                /* BỎ VIỀN KHUNG */
             background-color: transparent;/* BỎ NỀN TRẮNG */
             box-shadow: none;            /* BỎ BÓNG MỜ KHUNG */
-            transition: all 0.3s ease;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
         /* PICTURE IN CARD */
@@ -102,6 +105,7 @@
             align-items: center;
             overflow: visible;
             border-radius: 0;
+            margin-top: 15px;
         }
 
         .char-img {
